@@ -230,4 +230,15 @@ public class Board {
         }
         return false;
     }
+    public void reset() {
+        // Reset the board by setting all tiles to 0
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                grid[i][j] = 0;
+            }
+        }
+        // Spawn two new tiles on the board
+        spawnTile();
+        spawnTile();
+    }
 }
